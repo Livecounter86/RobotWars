@@ -47,9 +47,9 @@ public class Robot {
         return false;
     }
     // metod proverki na popadanie
-    boolean hitRobot(char gotKey) {
-        while (charCheck(gotKey) != true) {
-            System.out.println("Please enter correct value ");
+    boolean hitRobot(char gotKey, String name) {
+        while (!charCheck(gotKey)) {
+            System.out.println(name + " Please enter correct value ");
             gotKey = enteredKey();
         }
         for (int i = 0; i < damageKeys.length(); i++) {

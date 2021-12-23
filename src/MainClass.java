@@ -17,7 +17,7 @@ public class MainClass {
             ActionMenu.printActionMenu(robot1.robotName);
             char firstRobotHit = robot1.enteredKey();
 
-            if(robot1.hitRobot(firstRobotHit)==true && !(String.valueOf(firstRobotHit).equalsIgnoreCase("p"))){
+            if(robot1.hitRobot(firstRobotHit, robot1.robotName) && !(String.valueOf(firstRobotHit).equalsIgnoreCase("p"))){
                 robot2.health = robot2.health - 20;
                 System.out.println("You damaged robot " + robot2.robotName);
             }else if(String.valueOf(firstRobotHit).equalsIgnoreCase("p")){
@@ -30,7 +30,7 @@ public class MainClass {
             ActionMenu.printActionMenu(robot2.robotName);
             char secondRobotHit = robot2.enteredKey();
 
-            if(robot2.hitRobot(secondRobotHit)==true && !(String.valueOf(secondRobotHit).equalsIgnoreCase("p"))){
+            if(robot2.hitRobot(secondRobotHit, robot2.robotName) && !(String.valueOf(secondRobotHit).equalsIgnoreCase("p"))){
                 robot1.health = robot1.health - 20;
                 System.out.println("You damaged robot " + robot1.robotName);
             }else if(String.valueOf(secondRobotHit).equalsIgnoreCase("p")){
